@@ -5,5 +5,4 @@ class AppColors {
 
   static const primary = Color(0xFFFEB30A);
   static const white = Colors.white;
-  static const black = Colors.black;
 }

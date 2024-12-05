@@ -9,5 +9,5 @@ class AppImages {
   static const h4 = 'assets/images/h4.png';
 
   static const shoppingBag = 'assets/icons/shopping_bag.svg';
-  static const arrowRight = 'assets/icons/arrow_right.svg';
+  static const arrowLeft = 'assets/icons/arrow_right.svg';
 }
