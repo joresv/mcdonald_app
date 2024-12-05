@@ -112,8 +112,12 @@ class _CurvedCarouselState extends State<CurvedCarousel>
             spacing: widget.spacing,
             infiniteScroll: widget.infiniteScroll,
           ),
-          child: Stack(
-            children: _buildCarouselItems(),
+          child: CarouselItemBuilder(
+            items: widget.items,
+            offset: _offset,
+            visibleItems: widget.visibleItems,
+            scaleFactor: widget.scaleFactor,
+            spacing: widget.spacing,
           ),
         ),
       ),
@@ -278,7 +282,7 @@ class CarouselItemBuilder extends StatelessWidget {
     final viewportHeight = MediaQuery.of(context).size.height;
     final normalizedOffset = (itemOffset / viewportHeight).abs();
 
-    final x = viewportWidth / 2 + (sin(normalizedOffset * pi) * spacing);
+    final x = viewportWidth;
     final y = itemOffset;
 
     return Offset(x, y);
